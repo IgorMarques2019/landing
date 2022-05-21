@@ -1,0 +1,153 @@
+@import url(./colors.css);
+@import url(./fonts.css);
+@import url(./global.css);
+@import url(./tipografia.css);
+
+
+@import url(./header.css);
+@import url(./banner.css);
+
+
+main {
+  background: var(--light);
+}
+
+main>img {
+  padding: 60px;
+  margin: 0 auto;
+}
+
+main>article {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 60px 20px;
+  place-items: center;
+  padding: 40px;
+
+
+}
+
+main article>.main-picture02,
+main article>.main-picture01 {
+  position: relative;
+}
+
+.main-picture02::after {
+  position: absolute;
+  content: "";
+  display: block;
+  bottom: 0px;
+  right: -70px;
+  width: 62px;
+  height: 72px;
+  background: url("../imgs/tes.png") no-repeat;
+}
+
+.main-picture01::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: -70px;
+  width: 62px;
+  height: 72px;
+  background: url("../imgs/tes.png") no-repeat;
+}
+
+
+
+.introducao-texto {
+  padding: 0px 20px;
+
+}
+
+.introducao-texto h2 {
+  font-weight: 700;
+  line-height: 60px;
+}
+
+.introducao-texto p {
+  font-weight: 400;
+  line-height: 30px;
+  text-align: justify;
+  letter-spacing: 1px;
+}
+
+.introducao-texto p+p {
+  margin-top: 10px;
+}
+
+
+@media (max-width:900px) {
+
+  .main-picture02::after,
+  .main-picture01::before {
+    display: none;
+
+  }
+}
+
+@media (max-width:812px) {
+  main>article {
+    place-items: start;
+  }
+}
+
+main article div {
+  height: 100%;
+}
+
+main article div>img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width:700px) {
+  main > article {
+    grid-template-columns:1fr;
+  }
+
+  main article div {
+    display:none;
+  }
+
+  main article div> img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+}
+
+@media (max-width:480px) {
+main article {
+  padding:20px;
+  gap:20px 0px;
+}
+
+
+
+
+}
+@media (max-width:370px) {
+main article {
+  padding:10px;
+}
+
+.introducao-texto > h2 {
+  font-size:25px;
+  text-transform:uppercase;
+}
+
+.introducao-texto p + p{
+margin-top:20px;
+}
+.introducao-texto p {
+  font-size:1rem;
+}
+
+.introducao-texto h2::first-letter {
+color:var(--cl-02);
+}
+}
