@@ -52,6 +52,9 @@ header ul li a:hover::after {
 
 
 @media (max-width:480px) {
+  header ul li a::after {
+    display:none;
+  }
   header .container {
     flex-direction: column;
   }
